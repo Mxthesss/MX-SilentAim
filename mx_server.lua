@@ -52,14 +52,14 @@ local function logEvent(source)
         -- 1st we create the embed, this is a JSON object
         local embedData = {
             {
-                ['title'] = '[ANTI-AIM] Modified RPF files detected',
-                ['color'] = 16711680,
+                ['title'] = '[MX-AntiAim] Modified RPF files detected',
+                ['color'] = 070121,
                 ['footer'] = {
                     ['text'] = os.date('%c'),
                 },
                 ['description'] = 'Player: ' .. steamname .. '\nLicense: ' .. license .. '\nSteamID: ' .. GetPlayerIdentifier(src, 1) .. '\nIP: ||' .. GetPlayerEndpoint(src) .. '||',
                 ['author'] = {
-                    ['name'] = '[ANTI-AIM]',
+                    ['name'] = '[Mxthess]',
                     ['icon_url'] = Config.Avatar,
                 },
             }
