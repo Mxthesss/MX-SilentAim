@@ -19,7 +19,7 @@ if Config.Framework == 'qb' then
         Citizen.Wait(200)
     end
 elseif Config.Framework == 'esx' then
-    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+    ESX = exports["es_extended"]:getSharedObject()
     while ESX == nil do
         Citizen.Wait(200)
     end
@@ -38,7 +38,7 @@ local function logEvent(source)
             playerTrust = true
         end
     elseif Config.Framework == 'esx' then
-        if ESX.GetPlayerFromId(src).getGroup() == 'admin' or ESX.GetPlayerFromId(src).getGroup() == 'mod'  or ESX.GetPlayerFromId(src).getGroup() == 'developer' or ESX.GetPlayerFromId(src).getGroup() == 'hladmin'or ESX.GetPlayerFromId(src).getGroup() == 'owner' then
+        if ESX.GetPlayerFromId(src).getGroup() == 'admin' or ESX.GetPlayerFromId(src).getGroup() == 'mod'  or ESX.GetPlayerFromId(src).getGroup() == 'developer' or ESX.GetPlayerFromId(src).getGroup() == 'hadmin'or ESX.GetPlayerFromId(src).getGroup() == 'owner' then
             playerTrust = true
         end
     end
